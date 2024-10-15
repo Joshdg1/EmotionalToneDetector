@@ -7,7 +7,6 @@ import './styles/App.css';
 function App() {
   const [text, setText] = useState('');
   const [result, setResult] = useState(null);
-  const [error] = useState(null);
 
   const handleSubmit = async () => {
     try {
@@ -37,7 +36,6 @@ function App() {
       />
       <br />
       <button onClick={handleSubmit}>Check</button>
-      {error && <p className="error-message">{error}</p>}
       {result && <AnalysisResult result={result} />}
     </div>
   );
