@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Emotional Tone Detector
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an **Emotional Tone Detector** built with React.js. It uses the Hugging Face API to analyze the emotional tone of a given text input and provides a visual representation of the detected emotions.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Creating an API Key](#creating-an-api-key)
+  - [Setting Up Environment Variables](#setting-up-environment-variables)
+- [Limitations of the API](#limitations-of-api)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Analyze emotional tone of text input
+- Display detected emotions
+- Emotions:
+    - Angry
+    - Joy
+    - Suprised
+    - Fear
+    - Sad
+    - No emotion
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+Make sure you have the following installed:
+- Node.js (v18 or later)
+- npm (Node Package Manager)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository
+    ```bash
+    git clone https://github.com/Joshdg1/EmotionalToneDetector.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    cd emotional-tone-detector
+    ```
 
-### `npm run eject`
+2. Install the dependencies once you're in your project in any IDE
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```
+    npm install
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Creating an API key
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To use the Hugging Face API, you need to create an API key:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Go to [HuggingFace](https://huggingface.co/)
+2. Create an account or log in if you already have one.
+3. Once logged in, navigate to your account settings by clicking on your profile picture in the top right corner and selecting `Settings`.
+4. In the settings menu, find the `Access Tokens` section.
+5. Click on `New token` to create a new API key.
+6. Name your token and set the desired permissions (`Read` is fine for this case).
+7. Click `Generate` to create your token. Copy the generated token, as you will need it for the next step.
 
-## Learn More
+### Setting up environment variables
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. In the root of your project directory, create a new file named `.env` by copying the template:
+```bash
+    cp .env.example .env
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Open the .env file and put in your API key.
+3. Save the .env file.
 
-### Code Splitting
+### Start the server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Run the dev server and test out the project by running the following command:
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+### Limitations of API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**You can only do a call after 20 seconds because the API is loading**
