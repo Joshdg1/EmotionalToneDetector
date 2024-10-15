@@ -53,7 +53,7 @@ Make sure you have the following installed:
 To use the Hugging Face API, you need to create an API key:
 
 1. Go to [HuggingFace](https://huggingface.co/)
-2. Create an account or log in if you already have one.
+2. Create an account or log in if you already have one. (**Confirm your email if you create a new account**)
 3. Once logged in, navigate to your account settings by clicking on your profile picture in the top right corner and selecting `Settings`.
 4. In the settings menu, find the `Access Tokens` section.
 5. Click on `New token` to create a new API key.
