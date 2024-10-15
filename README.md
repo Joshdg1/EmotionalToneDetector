@@ -2,6 +2,8 @@
 
 This project is an **Emotional Tone Detector** built with React.js. It uses the Hugging Face API to analyze the emotional tone of a given text input and provides a visual representation of the detected emotions.
 
+**This project for now only works in ENGLISH**
+
 
 ## Table of Contents
 
